@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['techhubwebapp.onrender.com', 'http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['techhubwebapps.onrender.com', 'http://127.0.0.1:8000/']
 
 
 # Application definition
@@ -137,5 +137,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'deboraholaboye@gmail.com'  # replace with your email
-EMAIL_HOST_PASSWORD = 'tzwz papp gyih nypt'     # replace with your email password
+EMAIL_HOST_PASSWORD = 'yourpassword'     # replace with your email password
 DEFAULT_FROM_EMAIL = 'deboraholaboye@gmail.com'
