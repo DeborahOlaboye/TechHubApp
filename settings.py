@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['techhubwebapp.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['techhubwebapp.onrender.com', 'http://127.0.0.1:8000/']
 
 
 # Application definition
