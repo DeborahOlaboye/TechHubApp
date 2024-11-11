@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['techwebapp.onrender.com']
+ALLOWED_HOSTS = ['*']
 port = int(os.environ.get("PORT", 8000))
 print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
 
