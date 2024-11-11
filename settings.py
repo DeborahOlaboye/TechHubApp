@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'TechHubWebsite.urls'
+ROOT_URLCONF = 'Tech.urls'
 
 TEMPLATES = [
     {
