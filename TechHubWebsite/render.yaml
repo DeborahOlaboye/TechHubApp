@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: my-service
-    env: python
-    runtime: python-3.10  # or 3.9, ensuring it's < 3.11
