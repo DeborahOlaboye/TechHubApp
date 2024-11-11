@@ -21,11 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%jss8yu5mhmay6wuqe)kpwe*8fn@feh_&joipdmvb9vgf7%y*('
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = ['*']
+port = int(os.environ.get("PORT", 8000))
+print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
 
 
 # Application definition
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'TechHubWebsite.urls'
@@ -124,6 +127,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
@@ -137,5 +141,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'deboraholaboye@gmail.com'  # replace with your email
-EMAIL_HOST_PASSWORD = 'tzwz papp gyih nypt'     # replace with your email password
+EMAIL_HOST_PASSWORD = 'yourpassword'     # replace with your email password
 DEFAULT_FROM_EMAIL = 'deboraholaboye@gmail.com'
