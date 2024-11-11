@@ -26,6 +26,3 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
