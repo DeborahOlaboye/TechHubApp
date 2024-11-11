@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['techwebapp.onrender.com']
 port = int(os.environ.get("PORT", 8000))
 
@@ -140,6 +140,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'deboraholaboye@gmail.com'  # replace with your email
-EMAIL_HOST_PASSWORD = 'yourpassword'     # replace with your email password
-DEFAULT_FROM_EMAIL = 'deboraholaboye@gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')  
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')    
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
